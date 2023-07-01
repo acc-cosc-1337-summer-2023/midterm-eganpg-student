@@ -2,11 +2,12 @@
 #include "catch.hpp"
 #include "question2.h"
 
-TEST_CASE("Verify Test Configuration", "verification") {
-	REQUIRE(true == true);
-}
+TEST_CASE("Time Functions") {
+    REQUIRE(get_hours(1570846218) == 2);
+    REQUIRE(get_minutes(1570846218) == 10);
+    REQUIRE(get_seconds(1570846218) == 18);
 
-TEST_CASE("test")
-{
-	REQUIRE(test_config() == true);
+    REQUIRE(get_hours(1570875018) == 10);
+    REQUIRE(get_minutes(1570875018) == 10);
+    REQUIRE(get_seconds(1570875018) == 18);
 }
